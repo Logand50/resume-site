@@ -1,0 +1,16 @@
+var button = document.querySelector('button');
+var body = document.getElementById('body');
+var nav = document.getElementById('nav');
+
+function dark() {
+    if (body.style.background == '') {
+        body.style.background = "rebeccapurple";
+        nav.style.background = 'black';
+        button.style.background = '';
+    }
+    else {
+        body.style.background = '';
+        nav.style.background = '';
+        button.style.background = 'black';
+    };
+};
