@@ -1,15 +1,13 @@
 body {
     margin-top: 80px;
     padding: 30px;
-    background-size: cover;
     background: #ced4da;
     font-family: sans-serif;
 }
 
 
-ul {
-    position: absolute;
-
+#nav {
+    position: relative;
     list-style-type: none;
     background-color: #83c5be;
     position: absolute;
@@ -18,15 +16,21 @@ ul {
     left: 0;
     right: 0;
     box-shadow: 0 0 25px 0 white;
+
 }
 
 header li {
+    position: relative;
+    top: 0px;
     float: left;
-    margin: 20px;
+    margin: 0px;
 }
 
 header li a {
 
+    width: 100px;
+    display: inline-block;
+    padding: 0px 20px;
     padding: 20px 20px;
     text-decoration: none;
     text-align: center;
@@ -69,14 +73,48 @@ li a:hover {
 }
 
 #bio {
-
+    text-indent: 50px;
     line-height: 1.5;
-    font-weight: bold;
-    font-size: 30px;
+    font-weight: normal;
+    font-size: 20px;
     margin: 10px 120px;
 }
 
 .employer {
-    margin: 0;
+    margin-left: 50px;
+    margin-bottom: 0px;
     line-height: 1;
+}
+
+#ms,
+#certs {
+    list-style-type: none;
+
+}
+
+
+.cert {
+    line-height: 3px;
+    margin: 15px;
+    padding: 10px;
+}
+
+#tire {
+    list-style: circle;
+}
+
+h3,
+p {
+    margin: 0;
+    padding: 0px;
+}
+
+#dark {
+    border-radius: 10%;
+    padding: 10px;
+    border: none;
+    color: rebeccapurple;
+    background-color: #83c5be;
+    top: 20px;
+    position: absolute;
 }
