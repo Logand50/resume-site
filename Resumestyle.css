@@ -1,4 +1,5 @@
 body {
+
     margin-top: 80px;
     padding: 30px;
     background: #ced4da;
@@ -7,12 +8,15 @@ body {
 
 
 #nav {
+    box-sizing: border-box;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
     position: relative;
     list-style-type: none;
     background-color: #83c5be;
     position: absolute;
-    height: 57px;
-    top: 50px;
+    height: 60px;
+    top: 60px;
     left: 0;
     right: 0;
     box-shadow: 0 0 25px 0 white;
@@ -20,6 +24,7 @@ body {
 }
 
 header li {
+
     position: relative;
     top: 0px;
     float: left;
@@ -27,11 +32,12 @@ header li {
 }
 
 header li a {
-
+    padding: 19px 19px;
+    position: relative;
+    top: 0;
+    height: 100%;
     width: 100px;
     display: inline-block;
-    padding: 0px 20px;
-    padding: 20px 20px;
     text-decoration: none;
     text-align: center;
     color: white;
@@ -39,10 +45,12 @@ header li a {
 }
 
 li a:hover {
-    box-shadow: 0 0 25px 0 white;
+    box-shadow: 0px 0px 25px 0px rgb(0, 0, 0);
 }
 
 #profilephoto {
+    border: 2px black solid;
+    border-color: black;
     top: -20px;
     right: 25px;
     position: absolute;
@@ -52,13 +60,13 @@ li a:hover {
 }
 
 #heading:before {
-    box-shadow: 0 0 10px 0 white;
+    box-shadow: 0 0 10px 0 rgb(255, 255, 255);
     top: 230px;
     content: "";
     display: block;
     width: 100%;
     height: 5px;
-    background: #83c5be;
+    background: rgb(0, 0, 0);
     left: 0;
     position: absolute;
 }
@@ -69,10 +77,12 @@ li a:hover {
     font-size: 75px;
     margin-top: 30px;
     text-align: center;
-    color: #83c5be;
+    color: rgb(0, 0, 0);
 }
 
 #bio {
+    z-index: -100;
+    width: 80%;
     text-indent: 50px;
     line-height: 1.5;
     font-weight: normal;
@@ -110,11 +120,254 @@ p {
 }
 
 #dark {
+    font-size: 15px;
+    border: 1.5px solid black;
+    font-weight: bold;
     border-radius: 10%;
     padding: 10px;
-    border: none;
     color: rebeccapurple;
     background-color: #83c5be;
     top: 20px;
     position: absolute;
+}
+
+#dark:hover {
+    box-shadow: 0px 5px 10px black;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+#dark:active {
+    transform: translateY(-1px);
+}
+
+
+
+
+body {
+    background: rgb(212, 211, 211);
+}
+
+.contacts {
+
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    padding: 25px;
+    margin: 20px;
+    text-align: center;
+    list-style: none;
+
+}
+
+.contacts:hover {
+    color: black;
+    box-shadow: none;
+}
+
+.links {
+
+    border: none;
+}
+
+.links:hover {
+    color: black;
+    box-shadow: none;
+}
+
+.links:visited {
+    color: #569c95;
+}
+
+.links {
+    color: blue;
+}
+
+.ms {
+    width: 75%;
+}
+
+.cell {
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    box-shadow: 0 0 0 2px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+
+}
+
+#gameContainer {
+
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+}
+
+#cellContainer {
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
+
+#restartBtn,
+#restartBtn:after {
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    line-height: 10px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #00E6F6;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#restartBtn:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: 'TRY AGAIN';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+}
+
+#restartBtn:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+
+@media (min-width: 768px) {
+
+    .button-49,
+    .button-49:after {
+        width: 200px;
+        height: 86px;
+        line-height: 88px;
+    }
+}
+
+.animateContain {
+    z-index: -100;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#stars {
+    position: relative;
+    display: flex;
+}
+
+#stars span {
+    z-index: -100;
+    position: relative;
+    width: 40vh;
+    height: 5vh;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+        0 0 50px #4fc3dc,
+        0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+#stars span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+        0 0 50px #ff2d75,
+        0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(1);
+    }
 }
